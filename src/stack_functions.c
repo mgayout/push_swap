@@ -6,7 +6,7 @@
 /*   By: mgayout <mgayout@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 14:15:36 by mgayout           #+#    #+#             */
-/*   Updated: 2024/02/27 16:05:34 by mgayout          ###   ########.fr       */
+/*   Updated: 2024/03/04 13:46:26 by mgayout          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,5 +70,4 @@ void	reverse_rotate(t_stack **stack, char c)
 		tmp2 = tmp2->next;
 	tmp2->next = NULL;
 	ft_printf("rr%c\n", c);
-	
 }

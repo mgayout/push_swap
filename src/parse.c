@@ -6,7 +6,7 @@
 /*   By: mgayout <mgayout@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 08:24:33 by mgayout           #+#    #+#             */
-/*   Updated: 2024/02/27 17:25:20 by mgayout          ###   ########.fr       */
+/*   Updated: 2024/03/04 13:53:32 by mgayout          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,9 @@ int	isadigit(char *str)
 	while (str[i])
 	{
 		if (str[i] == '0' || str[i] == '1' || str[i] == '2'
-		|| str[i] == '3' || str[i] == '4' || str[i] == '5'
-		|| str[i] == '6' || str[i] == '7' || str[i] == '8'
-		|| str[i] == '9' || str[0] == '-' || str[0] == '+')
+			|| str[i] == '3' || str[i] == '4' || str[i] == '5'
+			|| str[i] == '6' || str[i] == '7' || str[i] == '8'
+			|| str[i] == '9' || str[0] == '-' || str[0] == '+')
 			i++;
 		else
 			return (FALSE);
@@ -53,7 +53,7 @@ int	islimits(char *str)
 
 	i = atoi_ps(str);
 	if (i < INT_MIN || i > INT_MAX)
-		return(FALSE);
+		return (FALSE);
 	return (TRUE);
 }
 
@@ -63,9 +63,9 @@ int	isthesame(char **str)
 	int		j;
 	long	a;
 	long	b;
-	
+
 	i = 0;
-	while(str[i] != NULL)
+	while (str[i] != NULL)
 	{
 		j = i + 1;
 		while (str[j] != NULL)

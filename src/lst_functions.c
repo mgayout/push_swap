@@ -6,7 +6,7 @@
 /*   By: mgayout <mgayout@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 18:22:17 by mgayout           #+#    #+#             */
-/*   Updated: 2024/02/27 16:27:46 by mgayout          ###   ########.fr       */
+/*   Updated: 2024/03/04 13:56:05 by mgayout          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,6 @@ void	stackadd_front(t_stack **stack, t_stack *new)
 	}
 	else
 	{
-		
 		new->next = *stack;
 		(*stack)->prev = new;
 		new->prev = NULL;

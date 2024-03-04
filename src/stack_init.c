@@ -6,13 +6,13 @@
 /*   By: mgayout <mgayout@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 08:21:27 by mgayout           #+#    #+#             */
-/*   Updated: 2024/02/27 18:18:47 by mgayout          ###   ########.fr       */
+/*   Updated: 2024/03/04 13:47:15 by mgayout          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void    create_stack(t_stack **stack, char **str)
+void	create_stack(t_stack **stack, char **str)
 {
 	int		i;
 	int		nb;
@@ -30,7 +30,7 @@ void	fill_stack(t_stack **stack, int nb)
 {
 	t_stack	*node;
 	t_stack	*last_node;
-	
+
 	if (!stack)
 		return ;
 	node = malloc(sizeof(t_stack));
