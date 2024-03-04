@@ -6,7 +6,7 @@
 /*   By: mgayout <mgayout@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 08:11:28 by mgayout           #+#    #+#             */
-/*   Updated: 2024/03/04 13:58:25 by mgayout          ###   ########.fr       */
+/*   Updated: 2024/03/04 17:37:57 by mgayout          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,10 @@ int	main(int argc, char **argv)
 
 	a = NULL;
 	b = NULL;
-	if (argc == 1 || argc == 2)
+	if (argc == 1)
 		return (0);
+	else if (argc == 2)
+		main2(a, b, argv);
 	else
 		parse_stack(argv + 1);
 	create_stack(&a, argv + 1);
@@ -28,6 +30,26 @@ int	main(int argc, char **argv)
 	free_stack(&a);
 	free_stack(&b);
 	return (0);
+}
+
+void	main2(t_stack *a, t_stack *b, char **argv)
+{
+	int		i;
+
+	i = 0;
+	argv = ft_split(argv[1], ' ');
+	parse_stack(argv);
+	create_stack(&a, argv);
+	push_swap(&a, &b);
+	free_stack(&a);
+	free_stack(&b);
+	while (argv[i] != NULL)
+	{
+		free(argv[i]);
+		i++;
+	}
+	free(argv);
+	exit (1);
 }
 
 void	free_stack(t_stack **s)

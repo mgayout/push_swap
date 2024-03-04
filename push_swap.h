@@ -6,7 +6,7 @@
 /*   By: mgayout <mgayout@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 08:12:22 by mgayout           #+#    #+#             */
-/*   Updated: 2024/03/04 14:27:52 by mgayout          ###   ########.fr       */
+/*   Updated: 2024/03/04 17:38:05 by mgayout          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ typedef struct s_stack
 
 //MAIN
 
+void	main2(t_stack *a, t_stack *b, char **argv);
 void	free_stack(t_stack **s);
 void	error(void);
 //void	print_nb(t_stack *s);
