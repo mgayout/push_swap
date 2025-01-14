@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack_function.c                                   :+:      :+:    :+:   */
+/*   stack_functions.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgayout <mgayout@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 14:15:36 by mgayout           #+#    #+#             */
-/*   Updated: 2024/03/04 13:46:26 by mgayout          ###   ########.fr       */
+/*   Updated: 2025/01/14 13:40:48 by mgayout          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../include/push_swap.h"
 
 void	swap(t_stack **stack, char c)
 {
@@ -21,7 +21,9 @@ void	swap(t_stack **stack, char c)
 	tmp2 = (*stack)->next->nb;
 	(*stack)->nb = tmp2;
 	(*stack)->next->nb = tmp1;
-	ft_printf("s%c\n", c);
+	if (!c)
+		return;
+	//ft_printf("s%c\n", c);
 }
 
 void	push(t_stack **a, t_stack **b, char c)
@@ -37,7 +39,9 @@ void	push(t_stack **a, t_stack **b, char c)
 		(*a)->prev = NULL;
 	}
 	stackadd_front(b, tmp);
-	ft_printf("p%c\n", c);
+	if (!c)
+		return;
+	//ft_printf("p%c\n", c);
 }
 
 void	rotate(t_stack **stack, char c)
@@ -52,7 +56,9 @@ void	rotate(t_stack **stack, char c)
 		tmp2 = tmp2->next;
 	tmp2->next = tmp;
 	tmp->next = NULL;
-	ft_printf("r%c\n", c);
+	if (!c)
+		return;
+	//ft_printf("r%c\n", c);
 }
 
 void	reverse_rotate(t_stack **stack, char c)
@@ -69,5 +75,7 @@ void	reverse_rotate(t_stack **stack, char c)
 	while (tmp2->next != *stack)
 		tmp2 = tmp2->next;
 	tmp2->next = NULL;
-	ft_printf("rr%c\n", c);
+	if (!c)
+		return;
+	//ft_printf("rr%c\n", c);
 }

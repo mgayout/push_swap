@@ -6,11 +6,11 @@
 /*   By: mgayout <mgayout@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 18:09:53 by mgayout           #+#    #+#             */
-/*   Updated: 2024/03/04 14:31:34 by mgayout          ###   ########.fr       */
+/*   Updated: 2025/01/14 13:29:08 by mgayout          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../include/push_swap.h"
 
 void	sort(t_stack **a, t_stack **b, t_stack **act)
 {

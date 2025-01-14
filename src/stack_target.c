@@ -6,11 +6,11 @@
 /*   By: mgayout <mgayout@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 14:05:38 by mgayout           #+#    #+#             */
-/*   Updated: 2024/03/04 14:30:47 by mgayout          ###   ########.fr       */
+/*   Updated: 2025/01/14 13:29:15 by mgayout          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../include/push_swap.h"
 
 t_stack	*find_closest_min(int nb_a, t_stack **stack)
 {

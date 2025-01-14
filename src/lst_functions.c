@@ -6,11 +6,11 @@
 /*   By: mgayout <mgayout@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 18:22:17 by mgayout           #+#    #+#             */
-/*   Updated: 2024/03/04 13:56:05 by mgayout          ###   ########.fr       */
+/*   Updated: 2025/01/14 13:28:53 by mgayout          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../include/push_swap.h"
 
 t_stack	*stacklast(t_stack *stack)
 {

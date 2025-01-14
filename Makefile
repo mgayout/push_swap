@@ -6,45 +6,41 @@
 #    By: mgayout <mgayout@student.42nice.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/22 08:12:19 by mgayout           #+#    #+#              #
-#    Updated: 2024/03/04 14:30:04 by mgayout          ###   ########.fr        #
+#    Updated: 2025/01/14 13:36:22 by mgayout          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	push_swap
-CC		=	gcc
-CFLAGS	=	-Wextra -Wall -Werror -g3
-REMOVE	=	rm -f
-SRC_DIR	=	./src/
-LIBFT	=	./libft/libft.a
-LIBPF	=	./ft_printf/libftprintf.a
 
-SRCS	=	src/main.c \
-			src/stack_init.c \
-			src/parse.c \
-			src/stack_functions.c \
-			src/lst_functions.c \
-			src/push_swap.c \
-			src/stack_target.c \
-			src/stack_cost.c \
-			src/sort.c \
+FLAG	=	-Wextra -Wall -Werror
 
-all: $(LIBFT) $(LIBPF) $(NAME)
+SRCDIR	= src
+HEADIR	= include
 
-$(NAME):
-			$(CC) $(SRCS) $(LIBFT) $(LIBPF) $(CFLAGS) -o $(NAME)
+SRC		= $(shell find $(SRCDIR) -name '*.c')
 
-$(LIBFT):
-			@make bonus -C libft/
+PRINTFDIR	=	ft_printf-main
+PRINTFURL	=	https://github.com/mgayout/ft_printf/archive/refs/heads/main.tar.gz
+PRINTFAR	=	libftprintf.a
 
-$(LIBPF):
-			@make -C ft_printf/
+all: $(NAME)
 
-clean:	
-			@make clean -C libft/
-			@make clean -C ft_printf/
+$(NAME):	$(PRINTFAR)
+					@gcc $(SRC) $(PRINTFDIR)/$(PRINTFAR) $(FLAG) -o $(NAME)
+
+$(PRINTFAR): 
+					@if [ ! -d $(PRINTFDIR) ]; then \
+						curl -L $(PRINTFURL) -o printf.tar.gz; \
+						tar -xzf printf.tar.gz; \
+						rm printf.tar.gz; \
+					fi
+					@make -C $(PRINTFDIR)
+
+clean:
+					@make clean -C $(PRINTFDIR)
 
 fclean:
-			$(REMOVE) $(NAME)
+			@rm -rf $(NAME)
 
 re: fclean all
 

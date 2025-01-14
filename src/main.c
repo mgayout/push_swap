@@ -6,11 +6,11 @@
 /*   By: mgayout <mgayout@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 08:11:28 by mgayout           #+#    #+#             */
-/*   Updated: 2024/03/04 17:37:57 by mgayout          ###   ########.fr       */
+/*   Updated: 2025/01/14 13:38:14 by mgayout          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../include/push_swap.h"
 
 int	main(int argc, char **argv)
 {
@@ -27,6 +27,8 @@ int	main(int argc, char **argv)
 		parse_stack(argv + 1);
 	create_stack(&a, argv + 1);
 	push_swap(&a, &b);
+	print_nb(a);
+	print_nb(b);
 	free_stack(&a);
 	free_stack(&b);
 	return (0);
@@ -41,6 +43,8 @@ void	main2(t_stack *a, t_stack *b, char **argv)
 	parse_stack(argv);
 	create_stack(&a, argv);
 	push_swap(&a, &b);
+	print_nb(a);
+	print_nb(b);
 	free_stack(&a);
 	free_stack(&b);
 	while (argv[i] != NULL)
@@ -70,7 +74,7 @@ void	error(void)
 	exit (1);
 }
 
-/*void	print_nb(t_stack *stack)
+void	print_nb(t_stack *stack)
 {
 	if (stack == NULL)
 		ft_printf("Stack is NULL\n");
@@ -79,4 +83,4 @@ void	error(void)
 		ft_printf("nb = %d\n", stack->nb);
 		stack = stack->next;
 	}
-}*/
+}

@@ -6,11 +6,11 @@
 /*   By: mgayout <mgayout@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 08:24:33 by mgayout           #+#    #+#             */
-/*   Updated: 2024/03/04 13:53:32 by mgayout          ###   ########.fr       */
+/*   Updated: 2025/01/14 13:29:03 by mgayout          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../include/push_swap.h"
 
 void	parse_stack(char **argv)
 {
