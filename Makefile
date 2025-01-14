@@ -6,7 +6,7 @@
 #    By: mgayout <mgayout@student.42nice.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/22 08:12:19 by mgayout           #+#    #+#              #
-#    Updated: 2025/01/14 13:36:22 by mgayout          ###   ########.fr        #
+#    Updated: 2025/01/14 15:51:45 by mgayout          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,6 +41,7 @@ clean:
 
 fclean:
 			@rm -rf $(NAME)
+			@rm -rf $(PRINTFDIR)
 
 re: fclean all
 
