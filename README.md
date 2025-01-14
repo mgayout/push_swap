@@ -4,7 +4,7 @@
 
 ![note](img/ps.png)
 
-Le projet `PUSH_SWAP` est un programme qui tri n'importe quelle suite de nombres.
+Le projet `PUSH_SWAP` est un programme qui tri une suite de nombres.
 
 Dans ce projet, j'ai utilisé un `algorithme` de `tri par insertion` en me basant sur les travaux de <a href="https://medium.com/@ayogun/push-swap-c1f5d2d41e97">A. Yigit Ogun</a>.
 
