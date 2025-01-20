@@ -29,7 +29,7 @@ En résumé, voici la logique de cette algorithme :
 
 Outre la demande d'utilisation d'un algorithme performant, le projet `PUSH_SWAP` nous permet de comprendre le principe de `HEAP` et `STACK`.
 
-<p align="center"><img src="clip/ps.gif" height="600"></p>
+<p align="center"><img src="clip/ps.gif" height="300"></p>
 
 ## <p> </p>
 
