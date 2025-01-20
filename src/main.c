@@ -6,7 +6,7 @@
 /*   By: mgayout <mgayout@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 08:11:28 by mgayout           #+#    #+#             */
-/*   Updated: 2025/01/14 13:38:14 by mgayout          ###   ########.fr       */
+/*   Updated: 2025/01/20 11:08:56 by mgayout          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,19 @@ void	print_nb(t_stack *stack)
 		ft_printf("Stack is NULL\n");
 	while (stack != NULL)
 	{
-		ft_printf("nb = %d\n", stack->nb);
+		/*if (stack->nb >= 0 && stack->nb < 10)
+			ft_printf("nb = %d      | ", stack->nb);
+		else if (stack->nb >= -9 && stack->nb < 99)
+			ft_printf("nb = %d     | ", stack->nb);
+		else if (stack->nb >= -99 && stack->nb < 999)
+			ft_printf("nb = %d    | ", stack->nb);
+		else if (stack->nb >= -999 && stack->nb < 9999)
+			ft_printf("nb = %d   | ", stack->nb);
+		else if (stack->nb >= -9999 && stack->nb < 99999)
+			ft_printf("nb = %d  | ", stack->nb);
+		else
+			ft_printf("nb = %d | ", stack->nb);*/
+		ft_printf("nb = %d | ", stack->nb);
 		stack = stack->next;
 	}
 }

@@ -1,8 +1,13 @@
-# PUSH_SWAP
+# <p align="center">PUSH_SWAP [Projet 42]</p>
 
-## 42 PROJECT
-
-![note](img/ps.png)
+<div align="center">
+	<table>
+		<tr><th>NOTE</th>
+		<th>ENGLISH VERSION</th></tr>
+		<tr><th><img src="https://github.com/mgayout/mgayout/blob/main/img/note/96.png" height="100"></th>
+		<th><a href= "https://github.com/mgayout/push_swap/blob/master/eng/README.md"><img src="https://github.com/mgayout/mgayout/blob/main/img/english.png" height="100"></a></th></tr>
+	</table>
+</div>
 
 Le projet `PUSH_SWAP` est un programme qui tri une suite de nombres.
 
@@ -24,39 +29,47 @@ En résumé, voici la logique de cette algorithme :
 
 Outre la demande d'utilisation d'un algorithme performant, le projet `PUSH_SWAP` nous permet de comprendre le principe de `HEAP` et `STACK`.
 
-![note](img/pst.png)
+<p align="center"><img src="clip/ps.gif" height="100"></p>
 
-# INSTALL
+## <p> </p>
 
-`make` permet de télécharger les librairies `LIBFT`, `FT_PRINTF` et d'en compiler le contenue afin de créer l'executable `push_swap`.
+## <p align="center">INSTALLATION</p>
 
-`make clean` permet de supprimer tout les fichiers objets des librairies.
+* Pour télécharger `PUSH_SWAP` :
 
-`make fclean` reprends le principe de `make clean` en supprimant en plus l'executable `push_swap`.
+```shell
+git clone https://github.com/mgayout/push_swap.git
+```
+<div align="center">
+	<table>
+		<tr><th colspan="2" align="center">Règles</th></tr>
+		<tr><td align="center">make</td>
+		<td>Compilation</td></tr>
+		<tr><td align="center">make clean</td>
+		<td>Suppression des fichiers objets</td></tr>
+		<tr><td align="center">make fclean</td>
+		<td>Suppression des fichiers objets et du programme push_swap</td></tr>
+		<tr><td align="center">make re</td>
+		<td>Suppression des fichiers objets et de l'archive suivi d'une compilation</td></tr>
+	</table>
+</div>
 
-`make re` reprends le principe de `make fclean` en compilant de nouveau.
+* Pour tester `PUSH_SWAP` :
 
-# TEST
-
-Pour tester ce programme il vous suffit de rentrer les arguments à trier, comme ceci :
-
-`./push_swap "1 3 2"`
-
+```shell
+./push_swap "1 2 3"
+```
 ou
-
-`./push_swap 1 3 2`
-
-Pour faciliter vos tests avec des grandes valeurs vous pouvez écrire ceci :
-
-`./push_swap $(seq $a $b | shuf -n $c | tr '\n' ' ')`
-
+```shell
+./push_swap 1 2 3
+```
+ou
+```shell
+./push_swap $(seq $a $b | shuf -n $c | tr '\n' ' ')
+```
 * `seq` permet de définir un ensemble de valeur avec `$a` comme valeur minimum et `$b` comme valeur maximum.
 
 * `shuf` permet de générer aléatoirement des nombres avec `$c` représentant le nombre de valeurs a généré.
 
 * `tr` permet de remplacer un caractère par un autre.
 	* Ici dans l'exemple, remplacer '\n' par un ' '.
-
-<div align="center">
-<img align="center"  width="600" src="https://github.com/mgayout/push_swap/blob/master/clip/ps.gif">
-</div>
